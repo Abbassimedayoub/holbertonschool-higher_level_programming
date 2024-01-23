@@ -6,10 +6,12 @@ four of the year one curriculum, I learned Python, MySQL and JavaScript.
 Simultaneously, I continued to reinforce and expand my skills in C and shell
 scripting. The specific list of projects contained follows:
 
-* [Python - Hello, World](./python-hello_world)
+- [Python - Hello, World](./python-hello_world)
+- [if/else, loops, functions](./python-if_else_loops_functions/)
+
 ## Author :abbassimedayoub:
 
-* **abbassi mohamed ayoub** <[abbassimedayoub](https://github.com/abbassimedayoub)>
+- **abbassi mohamed ayoub** <[abbassimedayoub](https://github.com/abbassimedayoub)>
 
 ## Acknowledgements :pray:
 
