@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import hidden_4
-    list_names = dir(hidden_4)
-    for name in list_names:
-        if not name[:2] == '__':
-            print("{:s}".format(name))
+    from hidden_4 import *
+    names = dir()
+    for i in range(0, len(names)):
+        if (names[i][:2] != "__"):
+            print("{:s}".format(names[i]))
