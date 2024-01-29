@@ -1,4 +1,4 @@
-kjhfd# Python - Data Structures: Lists, Tuples
+# Python - Data Structures: Lists, Tuples
 
 This directory contains examples and explanations of two fundamental data structures in Python: Lists and Tuples. These data structures are used to organize and manipulate collections of data efficiently.
 ## Lists
