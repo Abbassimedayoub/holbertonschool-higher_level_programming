@@ -8,6 +8,8 @@ scripting. The specific list of projects contained follows:
 
 - [Python - Hello, World](./python-hello_world)
 - [if/else, loops, functions](./python-if_else_loops_functions/)
+- [python-import modules](./python-import_modules)
+- [python-data structures](./python-data_structures)
 
 ## Author :abbassimedayoub:
 
