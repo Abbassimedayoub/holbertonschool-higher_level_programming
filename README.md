@@ -10,6 +10,7 @@ scripting. The specific list of projects contained follows:
 - [if/else, loops, functions](./python-if_else_loops_functions/)
 - [python-import modules](./python-import_modules)
 - [python-data structures](./python-data_structures)
+- [Python - More Data Structures: Set, Dictionary](./python-more_data_structures)
 
 ## Author :abbassimedayoub:
 
