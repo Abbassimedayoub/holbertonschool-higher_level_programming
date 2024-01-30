@@ -24,7 +24,8 @@ intersection_set = my_set.intersection({5, 6, 7})
 ```
 ## Dictionary
 A Dictionary is an unordered collection of key-value pairs. Each key must be unique, and it maps to a specific value. Dictionaries are implemented using the dict data type in Python.
-### Usage   
+### Usage 
+
 ```pyhton 
 # Creating a dictionary
 my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
