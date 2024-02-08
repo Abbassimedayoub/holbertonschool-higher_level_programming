@@ -11,7 +11,8 @@ scripting. The specific list of projects contained follows:
 - [python-import modules](./python-import_modules)
 - [python-data structures](./python-data_structures)
 - [Python - More Data Structures: Set, Dictionary](./python-more_data_structures)
-- [Python - Exceptions](./python-exceptions)
+- [Python - Exceptions](./python-exceptions0)
+- [Python - Classes and Objects](./python-classes)
 
 ## Author :abbassimedayoub:
 
