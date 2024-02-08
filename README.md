@@ -13,6 +13,7 @@ scripting. The specific list of projects contained follows:
 - [Python - More Data Structures: Set, Dictionary](./python-more_data_structures)
 - [Python - Exceptions](./python-exceptions0)
 - [Python - Classes and Objects](./python-classes)
+- [python-more_classes](./python-more_classes)
 
 ## Author :abbassimedayoub:
 
