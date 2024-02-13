@@ -15,6 +15,7 @@ scripting. The specific list of projects contained follows:
 - [Python - Classes and Objects](./python-classes)
 - [python-more_classes](./python-more_classes)
 - [python-test_driven_development](./python-test_driven_development)
+- [python-everything_is_object](./python-everything_is_object)
 
 ## Author :abbassimedayoub:
 
