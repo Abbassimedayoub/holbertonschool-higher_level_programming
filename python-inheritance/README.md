@@ -19,7 +19,7 @@ dog.speak()  # Output: Animal speaks
 dog.bark()   # Output: Dog barks
 ```
 
-##In this example:
+## In this example:
 
 - Animal is the superclass, defining a method speak.
 - Dog is the subclass, which inherits from Animal.
