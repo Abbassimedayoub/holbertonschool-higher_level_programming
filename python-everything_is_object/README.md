@@ -5,7 +5,7 @@ Here's a brief explanation:
 ```python
 x = 42
 ```
-Here, x is a variable that references an integer object with the value 42.
+3. Here, x is a variable that references an integer object with the value 42.
 3. Functions Are Objects: In Python, functions are first-class citizens, which means they can be passed around and manipulated just like any other object. You can assign functions to variables, pass them as arguments to other functions, and even return them from other functions.
 
 4. Classes Are Objects: In Python, classes themselves are objects too. When you define a class, you're creating an object of type type, which is itself an instance of the type class. This allows for metaprogramming, where you can dynamically create or modify classes at runtime.
