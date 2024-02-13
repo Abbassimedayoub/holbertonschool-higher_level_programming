@@ -7,6 +7,10 @@ x = 42
 ```
 Here, x is a variable that references an integer object with the value 42.
 3. Functions Are Objects: In Python, functions are first-class citizens, which means they can be passed around and manipulated just like any other object. You can assign functions to variables, pass them as arguments to other functions, and even return them from other functions.
+
 4. Classes Are Objects: In Python, classes themselves are objects too. When you define a class, you're creating an object of type type, which is itself an instance of the type class. This allows for metaprogramming, where you can dynamically create or modify classes at runtime.
+
+
 5. Everything Can Have Attributes and Methods: Since everything is an object, everything can have attributes (variables associated with it) and methods (functions associated with it). Even simple types like integers and strings have methods associated with them.
+
 This object-oriented nature of Python is one of its key strengths, as it allows for a high level of abstraction and flexibility in programming. It also encourages a clean and consistent style of coding.
