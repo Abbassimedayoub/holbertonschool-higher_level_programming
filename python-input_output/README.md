@@ -5,15 +5,19 @@
 1. Using input() function
 - This function allows you to take input from the user via the command line.
 - Example
- ```python```
+
+ ```python
 name = input("Enter your name: ")
 print("Hello, " + name)
 ```
 
+
 2. Reading from files
 - You can read input from files using functions like open() and various file reading methods (read(), readline(), readlines()).
 - Example
-```python```
+
+
+```python
 with open('input.txt', 'r') as f:
     lines = f.readlines()
 ```
@@ -23,14 +27,15 @@ with open('input.txt', 'r') as f:
 - You can use the print() function to output data to the console.
 - Example:
 
-```python```
+```python
 print("Hello, world!")
 ```
 
 2. Writing to files
 - You can write data to files using functions like open() with mode 'w' or 'a', and various file writing methods (write(), writelines()).
 - Example
-```python```
+  
+```python
 with open('output.txt', 'w') as f:
     f.write("This is some data written to the file.")
 ```
@@ -38,7 +43,8 @@ with open('output.txt', 'w') as f:
 1. Using string formatting
 - You can use string formatting techniques like % formatting, .format() method, or f-strings (Python 3.6+).
 - Example
-```python```
+
+```python
 name = "Alice"
 age = 30
 print("Name: %s, Age: %d" % (name, age))
@@ -48,7 +54,7 @@ print(f"Name: {name}, Age: {age}")
 2. Formatting options
 - You can format output using various options like padding, precision, alignment, etc.
 - Example:
-```pyhton```
+```pyhton
 num = 3.14159
 print("Pi: {:.2f}".format(num))  # prints Pi: 3.14
 ```
