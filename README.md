@@ -17,6 +17,7 @@ scripting. The specific list of projects contained follows:
 - [python-test_driven_development](./python-test_driven_development)
 - [python-everything_is_object](./python-everything_is_object)
 - [Python - Inheritance](./python-inheritance)
+- [python-input_output](./python-input_output)
 
 
 ## Author :abbassimedayoub:
