@@ -2,6 +2,7 @@
 """function that reads a text file (UTF8) and prints it to stdout"""
 
 
-def read_file(filename="", text=""):
-    with open(filename, encoding="utf-8") as file:
-        return file.write(text)
+def read_file(filename="",  text=""):
+    with open(filename, 'w', encoding="utf-8") as file:
+        file.write(text)
+        return len(text)
