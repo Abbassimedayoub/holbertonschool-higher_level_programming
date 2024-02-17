@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""function that retun a load"""
 import json
 
 
