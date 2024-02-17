@@ -31,6 +31,6 @@ class Student:
                     new_attr[i] = self.__dict__[i]
             return new_attr
 
-        def reload_from_json(self, json):
-            for key, value in json.items():
-                setattr(self, key, value)
+    def reload_from_json(self, json):
+        for key, value in json.items():
+            setattr(self, key, value)
