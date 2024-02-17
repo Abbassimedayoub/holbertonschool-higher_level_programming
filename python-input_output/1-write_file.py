@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""function that reads a text file (UTF8) and prints it to stdout"""
+"""write a string to a text file"""
 
 
-def read_file(filename="",  text=""):
-    with open(filename, 'w', encoding="utf-8") as file:
-        return file.write(text)
+def write_file(filename="", text=""):
+    """returns the number of characters"""
+    with open(filename, 'w', encoding='utf-8') as file:
+        return (file.write(text))
