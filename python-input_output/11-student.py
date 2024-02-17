@@ -4,9 +4,6 @@ Defines a Student class and methods for data representation
 """
 
 
-import json
-
-
 class Student:
     """A class representing a student with basic information"""
 
@@ -32,5 +29,6 @@ class Student:
             return new_attr
 
     def reload_from_json(self, json):
+        """Replaces all attributes of the Student instance"""
         for key, value in json.items():
             setattr(self, key, value)
