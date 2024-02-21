@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Base Module"""
+from json import dumps
 
 
 class Base:
@@ -18,7 +19,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """ dictionary to JSON format"""
-        if list_dictionaries is None or len(list_dictionaries) == 0:
+        if list_dictionaries is None or not list_dictionaries == 0:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
