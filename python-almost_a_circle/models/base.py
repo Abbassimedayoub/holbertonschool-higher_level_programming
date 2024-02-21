@@ -18,8 +18,8 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """ dictionary to JSON format"""
-        if list_dictionaries is None or not list_dictionaries == 0:
+        '''Jsonifies a dictionary so it's quite rightly and longer.'''
+        if list_dictionaries is None or not list_dictionaries:
             return "[]"
         else:
             return dumps(list_dictionaries)
