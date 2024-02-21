@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """Base Module"""
 
+
 class Base:
     """Base class for managing ids"""
-    
+
     __nb_objects = 0  # private class attribute to manage ids
 
     def __init__(self, id=None):
