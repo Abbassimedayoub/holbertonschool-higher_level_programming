@@ -14,3 +14,11 @@ class Base:
         else:
             Base.__nb_objects += 1  # if no id provided, generate a new one
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """ dictionary to JSON format"""
+        if list_dictionaries is None or len(list_dictionaries):
+            return "[]"
+        else:
+            return json.dumps(list_dictionaries)
