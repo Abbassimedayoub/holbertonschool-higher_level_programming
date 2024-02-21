@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class Square(Base):
     """A class representing a square, inheriting from Base"""
 
