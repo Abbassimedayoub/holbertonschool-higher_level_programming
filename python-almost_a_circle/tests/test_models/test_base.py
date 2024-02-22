@@ -6,11 +6,39 @@ from models.base import Base
 
 class TestBase(unittest.TestCase):
 
+    def test_auto_id_assignment(self):
+        """Test automatic ID assignment"""
+        # Create multiple Base instances without passing IDs
+        base1 = Base()
+        base2 = Base()
+        base3 = Base()
+
+        # Check if the IDs are automatically assigned starting from 1
+        self.assertEqual(base1.id, 1)
+        self.assertEqual(base2.id, 2)
+        self.assertEqual(base3.id, 3)
+
+    def test_auto_id_increment(self):
+        """Test automatic ID assignment increment"""
+        # Create multiple Base instances without passing IDs
+        base1 = Base()
+        base2 = Base()
+        base3 = Base()
+
+        # Check if the IDs are assigned incrementally
+        self.assertEqual(base1.id, 1)
+        self.assertEqual(base2.id, 2)
+        self.assertEqual(base3.id, 3)
+
+        # Create another Base instance
+        base4 = Base()
+
+        # Check if the new ID is one greater than the previous one
+        self.assertEqual(base4.id, 4)
+
     def test_assign_id(self):
         test = Base(50)
         self.assertEqual(test.id, 50)
-
-   
 
     def test_to_json_string(self):
         dictionary = {'id': 50,
@@ -48,5 +76,3 @@ class TestBase(unittest.TestCase):
     def test_from_json_string_none(self):
         json_list = Base.from_json_string(None)
         self.assertEqual(json_list, [])
-
-   
