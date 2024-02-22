@@ -22,6 +22,8 @@ class TestSquare(unittest.TestCase):
         square = Square(3, 2, 1, 10)
         self.assertEqual(square.id, 10)
 
+        
+
     def test_square_int_error(self):
         with self.assertRaises(TypeError) as err:
             square = Square("hello", 2, 3)
