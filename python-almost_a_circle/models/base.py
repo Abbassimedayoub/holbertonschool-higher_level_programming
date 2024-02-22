@@ -2,6 +2,7 @@
 """Base Module"""
 from json import dumps
 
+
 class Base:
     """Base class for managing ids"""
 
@@ -33,6 +34,7 @@ class Base:
                                          for obj in list_objs])
         with open(filename, "w") as file:
             file.write(json_string)
+
     @staticmethod
     def from_json_string(json_string):
         """list of dictionaries represented by json_string"""
@@ -67,4 +69,3 @@ class Base:
             return instances
         except FileNotFoundError:
             return []
-        
