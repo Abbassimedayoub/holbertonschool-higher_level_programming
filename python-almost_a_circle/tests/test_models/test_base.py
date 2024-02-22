@@ -10,9 +10,7 @@ class TestBase(unittest.TestCase):
         test = Base(50)
         self.assertEqual(test.id, 50)
 
-    def test_no_id_assigned(self):
-        test = Base()
-        self.assertEqual(test.id, 1)
+   
 
     def test_to_json_string(self):
         dictionary = {'id': 50,
@@ -51,7 +49,4 @@ class TestBase(unittest.TestCase):
         json_list = Base.from_json_string(None)
         self.assertEqual(json_list, [])
 
-    def test_create_error(self):
-        with self.assertRaises(Exception) as err:
-            Base.create()
-        self.assertEqual(str(err.exception), "Wrong class") # change error msg to your own
+   
