@@ -1,47 +1,41 @@
 #!/usr/bin/python3
-"""Lists all cities of a given state from the database hbtn_0e_4_usa
 """
-import sys
+This script  takes in the name of a state
+as an argument and lists all cities of that
+state, using the database `hbtn_0e_4_usa`.
+"""
+
 import MySQLdb
+from sys import argv
 
-if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: error")
-        sys.exit(1)
+if __name__ == '__main__':
+    """
+    Access to the database and get the cities
+    from the database.
+    """
 
-    # Extract command-line arguments
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
-    state_name = sys.argv[4]
+    db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
+                         passwd=argv[2], db=argv[3])
 
-    # Connect to MySQL server
-    db = MySQLdb.connect(
-        user=username,
-        host="localhost",
-        port=3306,
-        password=password,
-        database=db_name,
-    )
+    with db.cursor() as cur:
+        cur.execute("""
+            SELECT
+                cities.id, cities.name
+            FROM
+                cities
+            JOIN
+                states
+            ON
+                cities.state_id = states.id
+            WHERE
+                states.name LIKE BINARY %(state_name)s
+            ORDER BY
+                cities.id ASC
+        """, {
+            'state_name': argv[4]
+        })
 
-    # Create a cursor object
-    cursor = db.cursor()
+        rows = cur.fetchall()
 
-    # Execute the SQL statement to get cities of the specified state
-    statement = """SELECT cities.name
-                   FROM cities
-                   JOIN states ON cities.state_id = states.id
-                   WHERE states.name = %s
-                   ORDER BY cities.id"""
-    cursor.execute(statement, (state_name,))
-
-    # Fetch all the rows
-    rows = cursor.fetchall()
-
-    # Extract city names and print the result
-    city_names = [row[0] for row in rows]
-    print(", ".join(city_names))
-
-    # Close the cursor and database connection
-    cursor.close()
-    db.close()
+    if rows is not None:
+        print(", ".join([row[1] for row in rows]))

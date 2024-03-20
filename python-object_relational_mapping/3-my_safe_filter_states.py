@@ -1,33 +1,42 @@
 #!/usr/bin/python3
-"""Lists all states from the database hbtn_0e_0_usa
 """
-import sys
+This script takes in an argument and
+displays all values in the states
+where `name` matches the argument
+from the database `hbtn_0e_0_usa`.
+
+This time the script is safe from
+MySQL injections!
+"""
+
 import MySQLdb
+from sys import argv
 
-if __name__ == "__main__":
-    # Check if the expected number of command-line arguments is provided
-    if len(sys.argv) != 5:
-        print("Usage: ./1-filter_states.py <username> <password> <database>")
-        sys.exit(1)
+if __name__ == '__main__':
+    """
+    Access to the database and get the states
+    from the database.
+    """
 
-    username: str = sys.argv[1]
-    password: str = sys.argv[2]
-    db_name: str = sys.argv[3]
-    state_name: str = sys.argv[4]
-    host: str = "localhost"
-    port: int = 3306
-    statement: str = "SELECT * FROM states WHERE name = %s ORDER BY id"
+    db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
+                         passwd=argv[2], db=argv[3])
 
-    db = MySQLdb.connect(
-        user=username,
-        host=host,
-        port=port,
-        password=password,
-        database=db_name,
-    )
-    cursor = db.cursor()
-    cursor.execute(statement, (state_name,))
-    rows = cursor.fetchall()
+    with db.cursor() as cur:
+        cur.execute("""
+            SELECT
+                *
+            FROM
+                states
+            WHERE
+                name LIKE BINARY %(name)s
+            ORDER BY
+                states.id ASC
+        """, {
+            'name': argv[4]
+        })
 
-    for row in rows:
-        print(row)
+        rows = cur.fetchall()
+
+    if rows is not None:
+        for row in rows:
+            print(row)
